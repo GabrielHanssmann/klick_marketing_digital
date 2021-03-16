@@ -7,6 +7,7 @@
     --color-white: #fff;
     --color-black: #000;
     /* Font Size */
+    --text-ultra-large: 64px;
     --text-large: 48px;
     --text-medium: 32px;
     --text-subtitle: 24px;
@@ -63,9 +64,7 @@
     animation: spin-ring 3s infinite ease-in-out;
   }
 
-  .ring p{
-      animation: spin-color-p 1s infinite ease-in-out alternate;
-  }
+
   .ring p span{
       color: var(--color-second);
       animation: spin-color-span 1s infinite ease-in-out alternate;
@@ -80,14 +79,6 @@
       }
   }
 
-  @keyframes spin-color-p{
-      from{
-          letter-spacing: 0px;
-      }
-      to{
-          letter-spacing: 50px;
-      }
-  }
   @keyframes spin-color-span{
       form{
           color: var(--color-second);
@@ -108,7 +99,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 20px 100px;
     background: var(--color-first);
     z-index: 1000;
     display: flex;
@@ -120,7 +111,7 @@ header{
 
 header.sticky{
     background: #ffffff;
-    padding: 20px 100px;
+    padding: 0px 100px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -232,7 +223,6 @@ header ul li ul li:hover a{
     font-size: 16px;
     text-align: center;
     color: var(--color-white);
-    /* opacity: .2; */
     transition: .5s ease-in-out;
 }
 
@@ -245,26 +235,57 @@ header ul li ul li:hover a{
 
 #backtotop.visible{
     visibility: visible;
-    /* opacity: .5; */
     background: var(--color-second);
 }
 
 #backtotop:hover{
-    opacity: 1;
-    /* background: var(--color-second); */
     cursor: pointer;
     border-radius: 50%;
 }
 /* <<<< BANER >>>>*/
 
 .banner-heroe{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     width: 100%;
     height: 600px;
-    margin: 125px 0 50px 0;
+    margin: 99px 0 50px 0;
     overflow: hidden;
-    background: url(/assets/img/Sitio-web-definitivo1.jpg) no-repeat center fixed;
-    background-size: contain;
+    background: #000033;
 }
+.banner-publicidad{
+    background: url(/assets/img/Banner-Publicidad-Digital.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+.banner-gestion{
+    background: url(/assets/img/Banner-Gestión-de-redes-sociales.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+.banner-desarrollo{
+    background: url(/assets/img/Banner-sitio-web.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+.banner-mail{
+    background: url(/assets/img/Banner-Mail-Marketing.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+.banner-nosotros{
+    background: url(/assets/img/Banner-Nosotros.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+.banner-blog{
+    background: url(/assets/img/banner-blog.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+.banner-heroe .banner-text{
+    color: #ffffff;
+    font-size: var(--text-ultra-large);
+    font-weight: var(--font-weight-bold);
+}
+
 /* .banner-heroe img{
    width: 100%;
    height: auto;
@@ -287,12 +308,12 @@ section {
 }
 .contentBx{
     padding-right: 30px;
-    margin-right: 150px;
+    margin-right: 50px;
 }
 
 .contentBx.left{
     padding-left: 30px;
-    margin-left: 150px;
+    margin-left: 50px;
     margin-right: 0;
 }
 
@@ -314,7 +335,8 @@ section {
     color: var(--color-second);
 }
 
-.btn{
+.btn,
+.g-recaptcha{
    
     position: relative;
     display: inline-block;
@@ -330,7 +352,8 @@ section {
     
 }
 
-.btn:hover{
+.btn:hover,
+.g-recaptcha:hover{
     box-shadow: inset 115px 0 0 0 var(--color-second);
     background: none;
 }
@@ -399,16 +422,20 @@ section {
     color: #999999;
 }
 
-.formBx form input[type="submit"]{
+.formBx form input[type="submit"],
+.g-recaptcha{
     max-width: 100px;
-    background: var(--color-white);
+    background-color: var(--color-white);
     color: var(--color-first);
     cursor: pointer;
     /* text-transform: uppercase; */
     letter-spacing: 2px;
     transition: 0.5s;
+    border: none;
+    font-size: var(--text-regular);
 }
-.formBx form input[type="submit"]:hover{
+.formBx form input[type="submit"]:hover,
+.g-recaptcha:hover{
     /* border-radius: 25px 0 25px 0;
     background: #2d2d88; */
     color: var(--color-white);
@@ -492,11 +519,12 @@ footer h3{
 }
 
 footer .logo-footer a{
-        font-size: var(--text-large);
-        letter-spacing: 1px;
-        text-decoration: none;
-        font-weight: 700;
+    font-size: var(--text-large);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
 }
+
 footer p,
 footer ul li{
     font-size: var(--text-regular);
@@ -592,17 +620,7 @@ max-width: 340px;
 margin: 15px;
 overflow: hidden;
 transition: 0.5s;
-/* box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3); */
-animation: box-animate 5s ease-in-out infinite alternate;
-}
-
-@keyframes box-animate{
-    from{
-        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
-    }
-    to{
-        box-shadow: -5px -10px -20px rgba(0, 0, 0, 0.3);
-    }
+box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .metodo .content .nosotrosBX .icon{
@@ -623,6 +641,7 @@ transition: 1s;
 .metodo .content .nosotrosBX:hover .icon{
 box-shadow: 0 0 0 600px var(--color-first);
 background: var(--color-first);
+transform: rotate(360deg) scale(2);
 }
 
 .metodo .content .nosotrosBX .icon h1{
@@ -809,25 +828,25 @@ color: #ffffff;
         padding: 40px 50px;
     }
     .contentBx {
-        margin-right: 100px;
+        margin-right: 50px;
     }
     .contentBx.left {
-        margin-left: 100px;
+        margin-left: 50px;
     }
 }
 
 @media (max-width: 991px){
     header{
-        padding: 40px 20px;
+        padding: 20px 20px;
         z-index: 1000;
     }
     header.sticky{
-        padding: 20px 20px;
+        padding: 0px 20px;
     }
     /*-- MENU RESPONSIVO --*/
     header .menu{
         position: fixed;
-        top: 140px;
+        top: 100px;
         left: -100%;
         display: block;
         padding: 100px 50px;
@@ -842,7 +861,7 @@ color: #ffffff;
         font-weight: 600;
     }
     header.sticky .menu{
-        top: 95px;
+        top: 60px;
     }
     .menu.active{
         left: 0;
@@ -888,6 +907,12 @@ color: #ffffff;
         filter: invert(1);
     }
 
+    /* <<<< BANNER >>>>*/
+    .banner-heroe .banner-text{
+        text-align: center;
+        padding: 0 10px;
+        font-size: var(--text-medium);
+    }
 
     /* <<<< SECCION >>>>*/
     section {
@@ -923,8 +948,9 @@ color: #ffffff;
     /* <<<< FOOTER >>>> */
 
     footer {
+        flex: none;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column;
         padding: 20px 20px 10px;
         animation: gradient 10s ease infinite;
     }
@@ -933,7 +959,7 @@ color: #ffffff;
         flex-flow: column;
     }
 
-    .footer-izq {
+    /* .footer-izq {
         flex: 1 0px;
     }
     .footer-der > *{
@@ -941,7 +967,7 @@ color: #ffffff;
     }
     .footer-der{
         flex: 2 0px;
-    }
+    } */
 
 
     /* <<<< METODO >>>>*/
@@ -953,10 +979,4 @@ color: #ffffff;
         font-size: var(--text-regular);
         margin: 0 0 50px 0;
     }
-}
-
-
-
-.hola{
-   transform: translateX(20px);
 }

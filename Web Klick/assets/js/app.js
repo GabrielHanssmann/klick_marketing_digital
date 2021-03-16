@@ -26,7 +26,7 @@ window.addEventListener('scroll', () => {
     },600);
   });
   
-  jQuery(window).scroll(function(){
+  jQuery(window).scroll( function(){
     if(jQuery(window).scrollTop() > 150)
     {
       jQuery("#backtotop").addClass("visible");
