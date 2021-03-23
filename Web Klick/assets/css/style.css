@@ -272,12 +272,18 @@ header ul li ul li:hover a{
     background-size: cover;
 }
 .banner-nosotros{
-    background: url(/assets/img/Banner-Nosotros.jpg) no-repeat center fixed;
+    background: url(/assets/img/Banner-nosotros.jpg) no-repeat center fixed;
     background-size: cover;
 }
 .banner-blog{
-    background: url(/assets/img/banner-blog.jpg) no-repeat center fixed;
+    background: url(/assets/img/Banner-Blog.jpg) no-repeat center fixed;
     background-size: cover;
+}
+
+.banner-contacto{
+    background: url(/assets/img/Banner-contacto.jpg) no-repeat center fixed;
+    background-size: cover;
+    margin-bottom: 0;
 }
 
 .banner-heroe .banner-text{
@@ -286,10 +292,6 @@ header ul li ul li:hover a{
     font-weight: var(--font-weight-bold);
 }
 
-/* .banner-heroe img{
-   width: 100%;
-   height: auto;
-} */
 
 /* <<<< SECCION >>>> */
 section {
@@ -323,16 +325,29 @@ section {
     letter-spacing: 1px;
 }
 
+
+
+
 .contentBx h3{
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: 400;
 }
 
-.contentBx p span{
+.contentBx .logok p span{
     font-size: 32px;
     font-weight: 700;
     color: var(--color-second);
+}
+
+.logok b{
+    color: var(--color-first);
+}
+.logok b span{
+    color: var(--color-second);
+}
+.logok b p span{
+    font-size: var(--text-regular);
 }
 
 .btn,
@@ -372,6 +387,17 @@ section {
     width: 100%;
     height: 100%;
 }
+
+/* <<<< CARTAS SERVICIOS >>>> */
+
+.servicio h3 b{
+    color: var(--color-first);
+}
+.servicio h3 b span{
+    color: var(--color-second);
+}
+
+
 
 /* <<<< FORMULARIO CONTACTO >>>>*/
 .contact{
@@ -587,6 +613,19 @@ footer .footer-abajo{
     flex: 2 0px;
 }
 
+/* <<<< REVELAR ELEMENTOS >>>>*/
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
 /* <<<< METODO >>>>*/
 
 .metodo{
@@ -600,8 +639,15 @@ footer .footer-abajo{
 
 .metodo h3 {
     font-size: 18px;
-    margin: 0 150px 50px 150px;
+    margin: 0 15vw 50px 15vw;
     font-weight: 400;
+}
+
+.metodo h3 b{
+    color: var(--color-first);
+}
+.metodo h3 b span{
+    color: var(--color-second);
 }
 
 .metodo .content{
@@ -622,6 +668,72 @@ overflow: hidden;
 transition: 0.5s;
 box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
 }
+
+.metodo .content .service{
+    max-width: 45%;
+    text-align: center;
+    background: #ffffff;
+    color: #111111;
+    margin: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.metodo .content .service .imagen-box{
+    max-width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+.metodo .content .service .imagen-box img{
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease-in-out;
+}
+
+.metodo .content .service:hover .imagen-box img{
+    transform: scale(1.2) rotate(5deg);
+}
+
+.metodo .content .service .bxBackground{
+    padding: 10px 20px;
+    position: relative;
+    background: var(--color-white);
+}
+
+.metodo .content .service a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.metodo .content .service .btn{
+    margin: 0;
+}
+.metodo .content .service:hover .btn{
+    box-shadow: inset 115px 0 0 0 var(--color-second);
+    background: none;
+}
+
+.metodo .content .service h2{
+    font-size: var(--text-medium);
+}
+
+.metodo .content .service h2,
+.metodo .content .service p{
+    color: var(--color-black);
+}
+
+.metodo .content .service p{
+    text-align: left;
+}
+
+.metodo .content .service .btn{
+    margin: 15px;
+    color: var(--color-white);
+}
+
+
+/*-----*/
 
 .metodo .content .nosotrosBX .icon{
 position: relative;
@@ -679,7 +791,7 @@ color: #ffffff;
 
 #blog a{
     text-decoration: none;
-    color: black;
+    /* color: black; */
 }
 .card-container {
     width: 100%;
@@ -698,6 +810,7 @@ color: #ffffff;
     min-width: 275px;
     margin: 1.25rem 0.75rem;
     background: white;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
     transition: all 300ms ease-in-out;
 }
 .card .card-img {
@@ -734,22 +847,26 @@ color: #ffffff;
     transition: all 200ms ease-in-out;
 }
 .card-tag {
-    width: 60px;
-    max-width: 100px;
+    width: 150px;
+    max-width: 200px;
     padding: 0.2rem 0.5rem;
     font-size: 12px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: #505f79;
-    color: #fff;
+    background: var(--color-second);
+    color: var(--color-white);
 }
-.tag-news {
-    background: #36b37e;
+
+.tag-1 {
+    background: var(--color-second);
+}
+.tag-2 {
+    background: var(--color-first);
 }
 
 .tag-deals {
-    background: #ffab00;
+    background: var(--color-first);
 }
 
 .tag-politics {
@@ -761,6 +878,7 @@ color: #ffffff;
     z-index: 10;
     font-size: 1.5rem;
     padding-bottom: 0.75rem;
+    color: black;
     transition: all 350ms ease-in-out;
 }
 
@@ -796,7 +914,7 @@ color: #ffffff;
     transform: translate(0,40px);
 }
 
-/* -- CARD IMAGES -- */
+/* -- CARTAS BLOG -- */
 
 .card-1 .card-img,
 .card-1 .card-img-hovered {
@@ -819,7 +937,61 @@ color: #ffffff;
     background-image: var(--card-img-hovered-overlay), url(https://source.unsplash.com/zAi2Is48-MA);
 }
 
+/* <<<< ARTICULOS BLOG >>>> */
 
+.blog-articulo{
+    margin-top: 20vh;
+    padding: 0 10vw;
+    /* max-width: 1040px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-articulo{
+    font-size: var(--text-medium);
+    padding: 3vh 5vw 3vh 0;
+    max-width: 1040px;
+}
+
+.img-articulo img{
+    width: 100%;
+    max-height: 500px;
+    margin-bottom: 25px;
+}
+
+.texto-articulo{
+    padding: 0 15vw;
+    margin-bottom: 50px;
+}
+
+.texto-articulo h3{
+    font-size: 32px;
+    margin: 25px 0;
+}
+.texto-articulo p{
+    font-size: var(--text-regular);
+}
+.texto-articulo ul,
+.texto-articulo ol{
+    margin: 20px 10vw 20px 10vw;
+}
+
+.texto-articulo ul li,
+.texto-articulo ol li{
+   font-style: italic;
+}
+.blog-articulo span{
+    color: var(--color-first);
+}
+.blog-articulo .lo1{
+    color: var(--color-second);
+}
+
+.error{
+    margin-top: 100px;
+}
 
 /* <<<< RESPONSIVO >>>> */
 
@@ -979,4 +1151,32 @@ color: #ffffff;
         font-size: var(--text-regular);
         margin: 0 0 50px 0;
     }
+    .metodo .content .service{
+        max-width: 100%;
+    }
+    .metodo .content .service,
+    .metodo .content .nosotrosBX{
+        margin: 15px 5px;
+    }
+
+    /*<<<< BLOG ARTICULO >>>>*/
+    .blog-articulo{
+        margin-top: 12vh;
+        padding: 0 5vw;
+    }
+
+    .header-articulo{
+        font-size: var(--text-subtitle);
+    }
+    .texto-articulo{
+        padding: 0 ;
+    }
+    .texto-articulo h3{
+        font-size: 24px;
+    }
+    .texto-articulo ul,
+    .texto-articulo ol{
+        margin: 20px 0px 20px 5vw;
+    }
+
 }
