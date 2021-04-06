@@ -11,12 +11,19 @@ window.addEventListener('scroll', () => {
   });
   
 // FUNCITON TOGGLE MENU HAMBURGER Y MENU TEXTO
-  function toggleMenu(){
-    var menuToggle = document.querySelector('.toggle');
-    var menu = document.querySelector('.menu');
+var menuToggle = document.querySelector('.toggle');
+var menu = document.querySelector('.menu');
+menuToggle.addEventListener('click', ()=>{
     menuToggle.classList.toggle('active');
     menu.classList.toggle('active');
-  };
+})
+
+// function toggleMenu(){
+//     var menuToggle = document.querySelector('.toggle');
+//     var menu = document.querySelector('.menu');
+//     menuToggle.classList.toggle('active');
+//     menu.classList.toggle('active');
+//   };
   
 
 // FUNCTION BACK TO TOP

@@ -1,0 +1,83 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="600" fill="#E5E5E5"/>
+<rect id="fondo" width="1200" height="600" fill="#000033"/>
+<rect id="Rectangle1" x="132" y="512" width="88" height="88" fill="white"/>
+<rect id="Rectangle2" x="366" y="512" width="88" height="88" fill="white"/>
+<rect id="Rectangle6" x="472" y="543" width="57" height="57" fill="white"/>
+<rect id="Rectangle11" x="26" y="543" width="57" height="57" fill="white"/>
+<rect id="Rectangle9" x="736" y="543" width="57" height="57" fill="white"/>
+<rect id="Rectangle12" x="1128" y="543" width="57" height="57" fill="white"/>
+<rect id="Rectangle7" x="684" y="563" width="37" height="37" fill="white"/>
+<rect id="Rectangle10" x="275" y="563" width="37" height="37" fill="white"/>
+<rect id="Rectangle8" x="931" y="563" width="37" height="37" fill="white"/>
+<rect id="Rectangle3" x="578" y="512" width="88" height="88" fill="white"/>
+<rect id="Rectangle4" x="812" y="512" width="88" height="88" fill="white"/>
+<rect id="Rectangle5" x="1000" y="512" width="88" height="88" fill="white"/>
+
+<style type="text/css"><![CDATA[
+
+#Rectangle1,
+#Rectangle2,#Rectangle3,#Rectangle4,
+#Rectangle5,#Rectangle6,#Rectangle7,
+#Rectangle8,#Rectangle9,#Rectangle10,
+#Rectangle11,#Rectangle12{
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: translateY(100px) rotate(0) ;
+    opacity: 0.07;
+    animation: rota 17s infinite linear;
+}
+
+#Rectangle5{
+    animation-delay: 1s;
+}
+#Rectangle1{
+    animation-delay: 2s;
+}
+#Rectangle7{
+    animation-delay: 3s;
+}
+#Rectangle2{
+    animation-delay: 5s;
+}
+#Rectangle3{
+    animation-delay: 0.5s;
+}
+#Rectangle6{
+    animation-delay: 8s;
+}
+#Rectangle9{
+    animation-delay: 12s;
+}
+#Rectangle4{
+    animation-delay: 10s;
+}
+#Rectangle10{
+    animation-delay: 7s;
+}
+#Rectangle11{
+    animation-delay: 4.5s;
+}
+#Rectangle8{
+    animation-delay: 6s;
+}
+#Rectangle12{
+    animation-delay: 7s;
+}
+#Rectangle9{
+    animation-delay: 12s;
+}
+
+
+
+@keyframes rota{
+    from{
+        transform: translateY(100px) rotate(0) ;
+    }
+    to{
+        transform: translateY(-700px) rotate(720deg);
+    }
+}
+    ]]></style>
+
+</svg>
