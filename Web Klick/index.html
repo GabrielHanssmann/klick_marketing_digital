@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KLICK-Agencia de Marketing Digital</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/img/favicon.ico" type="img/x-icon">
@@ -81,8 +81,26 @@
             </div>
         </div>
         <div class="w50 reveal">
-            <div class="imagen">
-                <img src="/assets/img/sitios-web.svg" alt="">
+            <div class="imagen inicio">
+                <picture>
+                    <source
+                      srcset="/assets/img/intro-mobile.gif"
+                      type="image/gif"
+                      media="all and (max-width:600px)"
+                    />
+                    <source
+                      srcset="/assets/img/intro.gif"
+                      type="image/gif"
+                      media="all and (min-width:601px) and (max-width:1200px)"
+                    />
+                    <source
+                      srcset="/assets/img/intro.gif"
+                      type="image/gif"
+                      media="all and (min-width:1201px)"
+                    />
+                    <img src="/assets/img/intro.gif" alt="Klick marketing digital" onContextMenu="return false;">
+                  </picture>
+                <!-- <img src="/assets/img/intro.gif" alt="Klick marketing digital" onContextMenu="return false;"> -->
             </div>
         </div>
     </div>
@@ -188,14 +206,14 @@
             </div>
         </div>
         <div class="formBx">
-            <form action="assets/php/enviar.php" method="POST" id="demo-form">
+            <form action="assets/php/enviar.php" method="POST" id="form" >
                 <h3>Contactanos</h3>
                 <input type="text" name="nombre" placeholder="Nombre Completo" required="Favor de completar este campo">
                 <input type="email" name="email" placeholder="Correo" required="Favor de completar este campo">
                 <input type="tel" name="telefono" placeholder="Telefono" required="Favor de completar este campo">
                 <textarea name="mensaje" placeholder="Tu mensaje" required="Favor de completar este campo"></textarea>
                 <button class="g-recaptcha" 
-                            //data-sitekey="6LexeOYZAAAAAJfmaJ9N_uelfYazf0p66CMeZSF1" 
+                            //data-sitekey="6LfR3qIaAAAAAJXK7CrGj7YZxYuOGERF0z4l33Xu" 
                             //data-callback='onSubmit' 
                             data-action='submit'>Enviar</button>
                 <!-- <input class="btn" type="submit" value="Enviar"> -->
@@ -245,12 +263,18 @@
         </li>
     </ul>
     <div class="footer-abajo">
-        <p>Todos los derechos reservados a <a target="_blank" href="https://klickmd.com/"><span >&lt;</span>KLICK<span>&gt;</span></a> &copy; Agencia de Marketing Digital 2021
+        <p>Todos los derechos reservados a <a target="_blank" href="https://klickmd.com/"><span >&lt;</span>KLICK<span>&gt;</span></a> &copy; Agencia de Marketing Digital <span id="date"></span>
         <br>Sitio Web Diseñado y Desarrollado por <a target="_blank" href="https://klickmd.com/"><span >&lt;</span>KLICK<span>&gt;</span></a></p>  
     </div>
 </footer>
     
     <script type="text/javascript" src="assets/js/app.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+          document.getElementById("form").submit();
+        }
+      </script> -->
     
 </body>
 </html>

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qué es una Landing Page y para qué sirve</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="shortcut icon" href="..//assets/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="..//assets/img/favicon.ico" type="img/x-icon">
@@ -63,7 +63,25 @@
                 <h1>Qué es una Landing Page y para qué sirve</h1>
             </div>
             <div class="img-articulo">
-                <img src="../assets/img/blog/landing-page.jpg" alt="">
+                <picture>
+                    <source
+                      srcset="../assets/img/blog/landing-page-mobile.jpg"
+                      type="image/jpg"
+                      media="all and (max-width:600px)"
+                    />
+                    <source
+                      srcset="../assets/img/blog/landing-page.jpg"
+                      type="image/jpg"
+                      media="all and (min-width:601px) and (max-width:1200px)"
+                    />
+                    <source
+                      srcset="../assets/img/blog/landing-page.jpg"
+                      type="image/jpg"
+                      media="all and (min-width:1201px)"
+                    />
+                    <img src="../assets/img/blog/landing-page.jpg" alt="Que es una landing page">
+                  </picture>
+                
             </div>
             <div class="texto-articulo">
                 <p>Una landing page (literalmente, página de aterrizaje) es la página a la que un visitante es dirigido después de hacer click en un anuncio, promoción o resultado de búsqueda.
@@ -205,7 +223,7 @@
             </li>
         </ul>
         <div class="footer-abajo">
-            <p>Todos los derechos reservados a <a target="_blank" href="https://klickmd.com/"><span >&lt;</span>KLICK<span>&gt;</span></a> &copy; Agencia de Marketing Digital 2021
+            <p>Todos los derechos reservados a <a target="_blank" href="https://klickmd.com/"><span >&lt;</span>KLICK<span>&gt;</span></a> &copy; Agencia de Marketing Digital <span id="date"></span>
             <br>Sitio Web Diseñado y Desarrollado por <a target="_blank" href="https://klickmd.com/"><span >&lt;</span>KLICK<span>&gt;</span></a></p>  
         </div>
     </footer>

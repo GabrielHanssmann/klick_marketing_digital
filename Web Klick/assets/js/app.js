@@ -1,4 +1,4 @@
-//PRELOADER
+// PRELOADER
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
     preloader.classList.add('preloader-finish');
@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
     header.classList.toggle('sticky', window.scrollY > 0);
   });
   
-// FUNCITON TOGGLE MENU HAMBURGER Y MENU TEXTO
+// FUNCITON TOGGLE MENU HAMBURGER AND MENU TEXT
 var menuToggle = document.querySelector('.toggle');
 var menu = document.querySelector('.menu');
 menuToggle.addEventListener('click', ()=>{
@@ -44,7 +44,7 @@ menuToggle.addEventListener('click', ()=>{
     }
   });
 
-  //FUNCTION REVEAL ELEMENTS
+// FUNCTION REVEAL ELEMENTS
 window.addEventListener("scroll", reveal);
 
 function reveal(){
@@ -60,3 +60,7 @@ function reveal(){
     }
   }
 };
+
+// SELECT DATE SPAN
+const date = document.getElementById("date");
+date.innerHTML = new Date().getFullYear();

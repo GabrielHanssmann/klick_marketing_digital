@@ -251,7 +251,7 @@ header ul li ul li:hover a{
     align-items: center;
     width: 100%;
     height: 500px;
-    margin: 99px 0 50px 0;
+    margin: 99px 0 0 0;
     overflow: hidden;
     background: #000033;
 }
@@ -456,9 +456,20 @@ section {
     /* background: var(--color-first); */
 }
 
+.w50 .imagen.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .w50 .imagen img{
     width: 100%;
     height: 100%;
+}
+
+.w50 .imagen.inicio img{
+    width: 500px;
+    height: 500px;
 }
 
 /* <<<< CARTAS SERVICIOS >>>> */
@@ -1263,6 +1274,11 @@ color: #ffffff;
     }
 
     .w50 .imagen{
+        height: 315px;
+    }
+
+    .w50 .imagen.inicio img{
+        width: 315px;
         height: 315px;
     }
 
