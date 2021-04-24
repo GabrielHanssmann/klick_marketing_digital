@@ -64,3 +64,19 @@ function reveal(){
 // SELECT DATE SPAN
 const date = document.getElementById("date");
 date.innerHTML = new Date().getFullYear();
+
+// Google reCaptcha client side validation
+
+document.getElementById("form").addEventListener("submit",function(evt)
+  {
+  
+  var response = grecaptcha.getResponse();
+  if(response.length == 0) 
+  { 
+    //reCaptcha not verified
+    alert("Por favor verifica que sos humano completando el reCaptcha de Google en el formulario"); 
+    evt.preventDefault();
+    return false;
+  }
+  
+});

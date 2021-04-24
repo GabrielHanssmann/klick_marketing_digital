@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qué son las Keywords y cómo funcionan</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <meta name="description" content="Las keywords -o mejor conocidas como palabras clave en español- son aquellas palabras de búsqueda que activan el despliegue de resultados y anuncios relacionados en un motor de búsqueda como Google o en los buscadores de nuestras redes sociales favoritas como por ejemplo Facebook, Instagram o Linkedin. Conoce más sobre este tema en el siguiente artículo"> 
+    <meta name="author" content="KLICK Marketing Digital">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="shortcut icon" href="..//assets/img/favicon.ico" type="image/x-icon">
@@ -15,8 +18,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="..//assets/img/favicon-16x16.png">
     
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B8VTKVVLG7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B8VTKVVLG7');
+</script>
+
 </head>
 <body>
 
@@ -29,7 +42,7 @@
 
     <!---------------- MENU ---------------->
     <header class="nav">
-        <a href="index.html" class="logo"><span class="log1">&lt;</span>KLICK<span class="log1">&gt;</span></a>
+        <a href="https://klickmd.com/" class="logo"><span class="log1">&lt;</span>KLICK<span class="log1">&gt;</span></a>
         <nav>
         <div class="toggle"></div>
         <ul class="menu">
@@ -143,7 +156,7 @@
 
 
     <!---------------- FORMULARIO ---------------->
-    <section id="contact" class="contact">
+    <section class="contact reveal">
         <div class="heading">
             <h2>Contacto</h2>
             
@@ -156,14 +169,24 @@
                         <div class="icon"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
                         <div class="text">
                             <h3>Whatsapp</h3>
-                            <p>+598 92 790 919</p>
+                            <p>+598 99 352 438</p>
                         </div>
                     </div>  
                     <div class="box">
                         <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
                         <div class="text">
                             <h3>Mail</h3>
-                            <p>info@klick.com.uy</p>
+                            <p>info@klickmd.com</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Dirección</h3>
+                            <p>Luis Alberto de Herrera 1248
+                                <br>Torre B Piso 4
+                                <br>Montevideo-Uruguay
+                            </p>
                         </div>
                     </div>
                     <div class="box">
@@ -176,17 +199,14 @@
                 </div>
             </div>
             <div class="formBx">
-                <form action="../assets/php/enviar.php" method="POST" id="demo-form">
+                <form action="/assets/php/enviar.php" method="POST" id="form" accept-charset="ISO-8859-1">
                     <h3>Contactanos</h3>
                     <input type="text" name="nombre" placeholder="Nombre Completo" required="Favor de completar este campo">
                     <input type="email" name="email" placeholder="Correo" required="Favor de completar este campo">
                     <input type="tel" name="telefono" placeholder="Telefono" required="Favor de completar este campo">
                     <textarea name="mensaje" placeholder="Tu mensaje" required="Favor de completar este campo"></textarea>
-                    <button class="g-recaptcha" 
-                                //data-sitekey="6LexeOYZAAAAAJfmaJ9N_uelfYazf0p66CMeZSF1" 
-                                //data-callback='onSubmit' 
-                                data-action='submit'>Enviar</button>
-                    <!-- <input class="btn" type="submit" value="Enviar"> -->
+                    <div class="g-recaptcha" data-sitekey="6LcIfKQaAAAAAIUembHsSb0KFgm0GFdrOU5z0mA5"></div>
+                    <input class="btn" type="submit" value="Enviar">
                 </form>
             </div>
         </div>
@@ -201,7 +221,7 @@
         <div class="footer-izq">
             <!--PONER IMAGEN LOGO-->
             <div class="logo-footer">
-                <a href="#" class="logo">&lt;KLICK&gt;</a>
+                <a href="https://klickmd.com/" class="logo">&lt;KLICK&gt;</a>
             </div>
             <p>Agencia de marketing digital especializada en ayudar a quienes deseen captar más clientes, fomentar el consumo de sus productos y aumentar las ventas a través de internet.</p>
         </div>
@@ -227,8 +247,8 @@
             <li>
                 <h3>Contacto</h3>
                 <ul class="caja-enlace">
-                    <li><b><i class="fa fa-whatsapp" aria-hidden="true"></i></b>&nbsp;&nbsp;+598 92 790 919</li>
-                    <li><b><i class="fa fa-envelope-o" aria-hidden="true"></i></b>&nbsp;&nbsp;info@klick.com.uy</li>
+                    <li><b><i class="fa fa-whatsapp" aria-hidden="true"></i></b>&nbsp;&nbsp;+598 99 352 438</li>
+                    <li><b><i class="fa fa-envelope-o" aria-hidden="true"></i></b>&nbsp;&nbsp;info@klickmd.com</li>
                     <li><b><i class="fa fa-clock-o" aria-hidden="true"></i></b>&nbsp;&nbsp;Lun a Vie 09:00 a 18:00</li>
                 </ul>
             </li>
