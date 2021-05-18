@@ -67,8 +67,7 @@ date.innerHTML = new Date().getFullYear();
 
 // Google reCaptcha client side validation
 
-document.getElementById("form").addEventListener("submit",function(evt)
-  {
+document.getElementById("form").addEventListener("submit", (evt) => {
   
   var response = grecaptcha.getResponse();
   if(response.length == 0) 
